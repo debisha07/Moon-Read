@@ -1,0 +1,22 @@
+name: moon-read-ci
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Validating Html 
+      run:  docker run --rm -v "$PWD:/data" ghcr.io/validator/validator:latest vnu /data/index.html
+      
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag moon-read
