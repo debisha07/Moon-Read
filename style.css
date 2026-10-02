@@ -14,8 +14,10 @@ nav {
   text-align: center;
   font-family: "Poppins";
 }
-nav li {
+nav a {
   margin-left: 90px;
+  text-decoration: none;
+  color : white;
   font-size: 18px;
   text-align: center;
   margin-top: 10px;
@@ -41,14 +43,14 @@ nav li {
   border: 1px solid white;
   background: #17153b;
 }
-nav li:last-child {
+nav a:last-child {
   border: 1px solid #c8acd6;
   padding: 2px;
   width: 150px;
   height: 30px;
   background: #433d8b;
 }
-nav li:first-child {
+nav a:first-child {
   font-family: "Amatic SC";
   font-size: 40px;
   color: white;
